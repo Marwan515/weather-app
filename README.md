@@ -36,22 +36,25 @@ The Weather App allows users to view current weather conditions and forecasts fo
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/your-username/weather-app.git
-   cd weather-app
+  ```bash
+    git clone https://github.com/Marwan515/weather-app.git
+    cd weather-app
+  ```
 
 2. Install Dependencies:
   ```bash
     npm install
+  ```
 
 3. Setup Enviornment Variable:
   Create `.env` file in the root directory of the project file with following variable:
   ```bash
     VITE_WEATHER_API_KEY='Your Api Key From OpenWeather API'
-
+  ```
 4. Run The Application: 
   ```bash
     npm run dev
+  ```
   Your Application will be available at `http://localhost:5173`.
 
 ## Environment Variables
