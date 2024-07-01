@@ -7,10 +7,13 @@ import {
   IconButton,
   Button
 } from '@mui/material'
-import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react'
 import SearchBar from './SearchBar'
 import { getLocations } from '../services/weatherApiService'
+import GitHubIcon from '@mui/icons-material/GitHub';
+import SearchIcon from '@mui/icons-material/Search';
+
+
 
 // eslint-disable-next-line react/prop-types
 const Navbar = ({setSearchResults, setWd, setWf, isMobile}) => {
@@ -56,9 +59,6 @@ const Navbar = ({setSearchResults, setWd, setWf, isMobile}) => {
 
   const reloadPage = () => {
     location.reload()
-    /*setSearchResults('');
-    setWd(null);
-    setWf(null);*/
   }
 
   return (
@@ -72,15 +72,27 @@ const Navbar = ({setSearchResults, setWd, setWf, isMobile}) => {
           <IconButton
             edge="start"
             color="inherit"
-            aria-label="menu"
+            aria-label="search"
             onClick={toggleDrawer(true)}
             sx={{backgroundColor: 'slategray'}}
           >
-            <MenuIcon />
+            <SearchIcon />
           </IconButton>
         ) : (
           <SearchBar onSearch={filterSearch} isMobile={isMobile} />
         )}
+        <IconButton
+          edge="end"
+          color="inherit"
+          aria-label="github"
+          component="a"
+          href="https://github.com/Marwan515"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{color: "black"}}
+        >
+          <GitHubIcon />
+        </IconButton>
       </Toolbar>
       <Drawer anchor="top" open={drawerOpen} onClose={toggleDrawer(false)}>
         <Box sx={{ padding: 2 }}>
